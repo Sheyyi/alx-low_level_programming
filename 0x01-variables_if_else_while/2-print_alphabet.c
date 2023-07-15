@@ -1,21 +1,22 @@
 #include <stdio.h>
 
 /**
- * main -
+ * main - Prints the alphabet consecutively in lowercase
  *
- * Return:
+ * Return: 0
  */
 int main(void)
 {
-	char c;
+	char c, n;
 
+	n = '\n';
 	c = 'a';
-	while(c <= 'z')
+	while (c <= 'z')
 	{
 		putchar(c);
-		putchar("\n");
-		c = c+1;
+		c = c + 1;
 	}
+	putchar(n);
 
-	return(0);
+	return (0);
 }
