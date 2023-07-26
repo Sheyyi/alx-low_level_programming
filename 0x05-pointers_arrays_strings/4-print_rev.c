@@ -11,4 +11,11 @@ void print_rev(char *s)
 	int n, l;
 
 	n = 0;
-	l = _strlen(
+	l = _strlen(*s);
+	while (n < l)
+	{
+		_putchar(*(s + (l - n)));
+		n++;
+	}
+	_putchar('\n');
+}
