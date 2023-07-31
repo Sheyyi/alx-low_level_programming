@@ -10,22 +10,20 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int sum0, sum1, i, j;
+	int sum0, sum1, i;
 
 	sum0 = 0;
 	sum1 = 0;
 	i = 0;
-	j = 0;
 	while (i < size)
 	{
-		sum0 += a[i][i];
+		sum0 += a[(i * size) + i];
 		i++;
 	}
 	while (i >= 0)
 	{
-		sum1 += a[i][j];
-		j++;
 		i--;
+		sum1 += a[(i * size) + (size - i - 1)];
 	}
 	printf("%d, %d\n", sum0, sum1);
 }
