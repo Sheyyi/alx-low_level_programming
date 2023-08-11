@@ -23,31 +23,31 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l2++;
 
 	if (n >= l2)
-		s = malloc(sizeof(char) * (l1 + l2 + 1));
+		s3 = malloc(sizeof(char) * (l1 + l2 + 1));
 	else
-		s = malloc(sizeof(char) * (l1 + n + 1));
+		s3 = malloc(sizeof(char) * (l1 + n + 1));
 
-	if (s == NULL)
+	if (s3 == NULL)
 		return (NULL);
 
 	i = j = 0;
 	while (i < l1)
 	{
-		s[i] = s1[i];
+		s3[i] = s1[i];
 		i++;
 	}
 	while (n >= l2 && i < (l1 + l2))
 	{
-		s[i] = s2[j];
+		s3[i] = s2[j];
 		i++;
 		j++;
 	}
 	while (n < l2 && i < (l1 + n))
 	{
-		s[i] = s2[j];
+		s3[i] = s2[j];
 		i++;
 		j++;
 	}
-	s[i] = '\0';
-	return (s);
+	s3[i] = '\0';
+	return (s3);
 }
