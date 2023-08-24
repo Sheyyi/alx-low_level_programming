@@ -27,6 +27,12 @@ list_t *add_node_end(list_t **head, const char *str)
 	lk->len = l;
 	linkedlist = *head;
 
+	if (*head == NULL)
+	{
+		*head = lk;
+		return (lk);
+	}
+
 	while (linkedlist->next != NULL)
 		linkedlist = linkedlist->next;
 
