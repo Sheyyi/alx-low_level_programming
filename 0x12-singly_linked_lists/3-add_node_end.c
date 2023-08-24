@@ -12,7 +12,7 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *lk;
-	list_t *linkedlist
+	list_t *linkedlist;
 	unsigned int l;
 
 	l = 0;
@@ -27,7 +27,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	lk->len = l;
 	linkedlist = *head;
 
-	while(linkedlist->next != NULL)
+	while (linkedlist->next != NULL)
 		linkedlist = linkedlist->next;
 
 	linkedlist->next = lk;
