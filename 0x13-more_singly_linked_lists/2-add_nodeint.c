@@ -4,9 +4,9 @@
 /**
  * add_nodeint - Adds a node at the beginning of a linked list
  * @head: Pointer to head of linked list
- * @int: New integer to be added
+ * @n: New integer to be added
  *
- * Return: Address to new element, NULL otherwise
+ * Return: Address of new element, NULL otherwise
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
@@ -20,5 +20,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	lk->next = *head;
 	*head = lk;
 
-	return (*head);
+	return (lk);
 }
