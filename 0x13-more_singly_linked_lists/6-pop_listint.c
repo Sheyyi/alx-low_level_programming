@@ -11,7 +11,7 @@ int pop_listint(listint_t **head)
 	int dat;
 	listint_t *linkedlist;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 		return (0);
 
 	dat = (*head)->n;
