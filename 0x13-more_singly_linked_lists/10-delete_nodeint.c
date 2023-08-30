@@ -33,7 +33,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		i++;
 	}
 
-	if (linkedlist == NULL)
+	if (linkedlist == NULL || (linkedlist->next) == NULL)
 		return (-1);
 
 	prev->next = linkedlist->next;
